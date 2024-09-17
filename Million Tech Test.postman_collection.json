@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "9aee0585-858e-4053-ba06-10ed5cd161ec",
+		"name": "Million Tech Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38382645"
+	},
+	"item": [
+		{
+			"name": "1. create-property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test Final\",\r\n  \"address\": \"Test Colombian\",\r\n  \"price\": 25500,\r\n  \"codeInternal\": \"178945\",\r\n  \"year\": 2025,\r\n  \"idOwner\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/create-property",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"create-property"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 - add-image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Filed\": \"0x676867666867666867666867666867666867666867\",\r\n  \"enabled\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/add-image?propertyId=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"add-image"
+					],
+					"query": [
+						{
+							"key": "propertyId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3- change-price",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/change-price?propertyId=5&newPrice=50000.00",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"change-price"
+					],
+					"query": [
+						{
+							"key": "propertyId",
+							"value": "5"
+						},
+						{
+							"key": "newPrice",
+							"value": "50000.00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4 - update-property",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test Init\",\r\n  \"address\": \"Test English American\",\r\n  \"price\": 50000000,\r\n  \"codeInternal\": \"123\",\r\n  \"year\": 2021\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/update-property?propertyId=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"update-property"
+					],
+					"query": [
+						{
+							"key": "propertyId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5 - list-properties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/list-properties?name=Test Init",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"list-properties"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Test Init"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
